@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 //Styles
 import { Wrapper } from "./Banner.style";
 //Animation
@@ -16,15 +17,17 @@ const image = {
   },
 };
 
-const Banner = ({ img, alt, height }) => (
-  <Wrapper
-    height={height}
-    img={img}
-    alt={alt}
-    as={motion.div}
-    variants={image}
-    animate="animate"
-    initial="initial"
-  />
-);
+const Banner = ({ img, alt, height }) => {
+  return (
+    <Wrapper
+      height={height}
+      img={img}
+      alt={alt}
+      as={motion.div}
+      variants={image}
+      animate="animate"
+      initial="initial"
+    />
+  );
+};
 export default Banner;

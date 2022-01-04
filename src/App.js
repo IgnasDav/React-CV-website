@@ -15,7 +15,7 @@ import { GlobalStyle } from "./GlobalStyles";
 
 const App = () => {
   const [page, setPage] = useState("home.");
-  const prevPage = useRef("home.");
+  const prevPage = useRef("");
   const [isFirstMount, setIsFirstMount] = useState(true);
   // const location = useLocation();
   useEffect(() => {

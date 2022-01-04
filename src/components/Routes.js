@@ -9,31 +9,31 @@ import Contact from "../components/Contact";
 import Works from "../components/Works";
 const CreateRoutes = ({ page, prevPage }) => {
   const location = useLocation();
-  let element;
-  switch (location.pathname) {
-    case "/":
-      element = <Home prevPage={prevPage} page={page} />;
-      break;
-    case "/about":
-      element = <About prevPage={prevPage} page={page} />;
-      break;
-    case "/tetris":
-      element = <Tetris prevPage={prevPage} page={page} />;
-      break;
-    case "/contact":
-      element = <Contact prevPage={prevPage} page={page} />;
-      break;
-    case "/works":
-      element = <Works prevPage={prevPage} page={page} />;
-      break;
+  // let element;
+  // switch (location.pathname) {
+  //   case "/":
+  //     element = <Home prevPage={prevPage} page={page} />;
+  //     break;
+  //   case "/about":
+  //     element = <About prevPage={prevPage} page={page} />;
+  //     break;
+  //   case "/tetris":
+  //     element = <Tetris prevPage={prevPage} page={page} />;
+  //     break;
+  //   case "/contact":
+  //     element = <Contact prevPage={prevPage} page={page} />;
+  //     break;
+  //   case "/works":
+  //     element = <Works prevPage={prevPage} page={page} />;
+  //     break;
 
-    default:
-  }
+  //   default:
+  // }
   return (
-    <AnimatePresence initial={false}>
+    <AnimatePresence initial={false} exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
-        <Route path={location.pathname} element={element} />
-        {/* <Route path="/" element={<Home prevPage={prevPage} page={page} />} />
+        {/* <Route path={location.pathname} element={element} /> */}
+        <Route path="/" element={<Home prevPage={prevPage} page={page} />} />
         <Route
           path="/about"
           element={<About prevPage={prevPage} page={page} />}
@@ -49,7 +49,7 @@ const CreateRoutes = ({ page, prevPage }) => {
         <Route
           path="/works"
           element={<Works prevPage={prevPage} page={page} />}
-        /> */}
+        />
       </Routes>
     </AnimatePresence>
   );

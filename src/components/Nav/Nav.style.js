@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100%;
   background-color: var(--green);
   color: var(--black);
   display: grid;

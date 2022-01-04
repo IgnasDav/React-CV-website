@@ -12,6 +12,8 @@ const InfoCard = ({
   paddingTop,
   paddingBottom,
   className,
+  btnTo,
+  btnHref,
 }) => (
   <Wrapper paddingTop={paddingTop} paddingBottom={paddingBottom}>
     <Content>
@@ -20,7 +22,11 @@ const InfoCard = ({
           <Card isTextLeft={isTextLeft}>
             <h2>{title}</h2>
             <p>{text}</p>
-            {btnText && <Button>{btnText}</Button>}
+            {btnText && (
+              <Button to={btnTo} btnHref={btnHref}>
+                {btnText}
+              </Button>
+            )}
           </Card>
           <Image
             src={img}
@@ -40,7 +46,11 @@ const InfoCard = ({
           <Card isTextLeft={isTextLeft}>
             <h2>{title}</h2>
             <p>{text}</p>
-            {btnText && <Button>{btnText}</Button>}
+            {btnText && (
+              <Button to={btnTo} btnHref={btnHref}>
+                {btnText}
+              </Button>
+            )}
           </Card>
         </>
       )}
