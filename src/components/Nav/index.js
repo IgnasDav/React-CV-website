@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 //Styles
 import { Wrapper, Content, Logo, Menu } from "./Nav.style";
 
@@ -6,7 +6,7 @@ const Nav = ({ page, setPage }) => {
   return (
     <Wrapper>
       <Content>
-        <Link to="/">
+        <NavLink to="/">
           <Logo>
             <span className="flex">
               <span className="big">I</span>
@@ -16,51 +16,54 @@ const Nav = ({ page, setPage }) => {
               </span>
             </span>
           </Logo>
-        </Link>
+        </NavLink>
         <Menu>
           <ul>
             <li>
-              <Link
+              <NavLink
                 to="/"
                 onClick={(e) => {
                   setPage(e.target.textContent);
                 }}
               >
                 home.
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/about"
                 onClick={(e) => {
                   setPage(e.target.textContent);
                 }}
               >
                 about.
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/works"
                 onClick={(e) => {
                   setPage(e.target.textContent);
                 }}
               >
                 works.
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/contact"
                 onClick={(e) => setPage(e.target.textContent)}
               >
                 contact.
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/tetris" onClick={(e) => setPage(e.target.textContent)}>
+              <NavLink
+                to="/tetris"
+                onClick={(e) => setPage(e.target.textContent)}
+              >
                 tetris.
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </Menu>

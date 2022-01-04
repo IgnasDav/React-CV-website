@@ -40,6 +40,12 @@ export const Menu = styled.div`
       background-clip: text;
       transition: 0.5s linear;
     }
+    .active {
+      background-size: 100%;
+      :after {
+        width: 90%;
+      }
+    }
     a:after {
       display: block;
       position: absolute;
