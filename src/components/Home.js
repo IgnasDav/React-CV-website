@@ -32,6 +32,7 @@ const Home = ({ prevPage, page }) => {
           title="developer. creator. fashionista."
           text="My work experience is in my github, link is in the footer. I am a aspiring Front-end engineer who is excited to work on new technologies like React.js, Vue.js, Angular. My next project is Trello copy, which I named Frello. I am a Front-End student at CodeAcademy, I am currently studying React.js, I have worked on projects like Address book app, where I had to save addresses to local storage, make features like delete, edit, add favorite current item and search functionality. Worked on a project where I used Bcrypt to encrypt passwords, used JWT to authorize logins using Node.js, the app shows delete buttons for the user which is logged in and who made the posts. Made simple resume website with React.js, where you can change languages by changing the state of language select . My all work experience with front end is pushed to my Github account. My other work experience is as a bar assistant where I learnt how to work as a team, communicate with people, and how to separate my work into small tasks."
           btnText="More About Ignas"
+          to="/about"
         />
         <Banner height img={BannerPhoto2} alt="Tree picture" />
         <InfoCard
@@ -41,6 +42,7 @@ const Home = ({ prevPage, page }) => {
           title="works."
           text="Here are the works that I've done throughout my short career as a front end developer. These works helped me to learn async/await, JWT authorization, save to local storage, delete, edit, add functionalities. "
           btnText="Read More"
+          to="/works"
         />
         <InfoCard
           img={CardPhoto2}
@@ -49,6 +51,7 @@ const Home = ({ prevPage, page }) => {
           text="As Front-end is my biggest passion I decided to develop tetris using React to showcase my skills and I wanted to put a little part of me into making this website my own.    "
           btnText="Play Tetris"
           isTextLeft
+          to="/tetris"
         />
         <InfoCard
           img={CardPhoto3}
@@ -57,6 +60,7 @@ const Home = ({ prevPage, page }) => {
           text="This section shows a little about me, my hobbies, interests and what I'm looking for in my career"
           btnText="Read More"
           paddingBottom
+          to="/about"
         />
       </motion.div>
     </>

@@ -2,8 +2,8 @@
 import { Link } from "react-router-dom";
 import { Wrapper } from "./Button.style";
 
-const Button = ({ children, btnTo, btnHref }) => {
-  const Component = typeof btnTo === "string" ? Link : "button";
+const Button = ({ children, to, btnHref }) => {
+  const Component = typeof to === "string" ? Link : "button";
   return (
     <Wrapper>
       {btnHref ? (
@@ -11,7 +11,7 @@ const Button = ({ children, btnTo, btnHref }) => {
           <Component>{children}</Component>
         </a>
       ) : (
-        <Component>{children}</Component>
+        <Component to={to}>{children}</Component>
       )}
     </Wrapper>
   );
